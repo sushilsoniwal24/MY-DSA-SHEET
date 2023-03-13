@@ -23,7 +23,7 @@ public class P_10_Rotate_Array {
 
     // * T.C = O(n) & S.C = O(1).
     public static void rotate2(int[] nums, int k) {
-        int n = nums.length, idx = 0;
+        int n = nums.length;
         k = k % n;
         if (k > n) {
             return;
@@ -45,7 +45,7 @@ public class P_10_Rotate_Array {
     }
 
     public static void main(String[] args) {
-        int[] nums = {-1, -100, 3, 99};
+        int[] nums = { -1, -100, 3, 99 };
         rotate2(nums, 2);
         System.out.println(Arrays.toString(nums));
     }
