@@ -1,10 +1,13 @@
+import java.util.Scanner;
+
 public class P_18_Square_Root {
 
     // https://leetcode.com/problems/sqrtx/description/
 
     // ? T.C = O(n) & S.C = O(1).
     public static int mySqrt1(int x) {
-        if (x < 2) return x;
+        if (x < 2)
+            return x;
         int ans = 1;
         for (int i = 2; i <= x / 2; i++) {
             if (i <= x / i) {
@@ -16,7 +19,7 @@ public class P_18_Square_Root {
         return ans;
     }
 
-    // * T.C = O(logn) & S.C = O(1).
+    // * T.C = O(log n) & S.C = O(1).
     public static int mySqrt2(int x) {
         if (x < 2) {
             return x;
@@ -37,39 +40,9 @@ public class P_18_Square_Root {
     }
 
     public static void main(String[] args) {
-        System.out.println(mySqrt2(17));
+        Scanner in = new Scanner(System.in);
+        int x = in.nextInt();
+        System.out.println(mySqrt2(x));
+        in.close();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
